@@ -24,7 +24,7 @@ public class Problem3 {
     }
 
     private static boolean isPrime(long numToCheck){
-        for(long i = 2; i < numToCheck; i++){
+        for(long i = 2; i < (numToCheck / 2); i++){
             if(numToCheck % i == 0){
                 return false;
             }
