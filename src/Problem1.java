@@ -4,7 +4,7 @@ public class Problem1 {
         System.out.println(multipleOfThreeAndFive());
     }
 
-    public static int multipleOfThreeAndFive(){
+    private static int multipleOfThreeAndFive(){
         int total = 0;
         for (int i = 1; i < 1000; i++){
             if(i % 3 == 0 || i % 5 == 0){
