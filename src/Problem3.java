@@ -5,7 +5,7 @@ public class Problem3 {
 
     private static long largestPrimeFactor(){
         long currentHighest = 2;
-        for(long i = 2L; i < 300425737572L; i++){
+        for(long i = 3L; i < 300425737572L; i += 2){
             if(600851475143L % i == 0) {
                 long otherFactor = 600851475143L/2;
                 if (isPrime(i)) {
@@ -16,6 +16,7 @@ public class Problem3 {
                 if(isPrime(otherFactor)){
                     if(otherFactor > currentHighest){
                         currentHighest = otherFactor;
+                        i = otherFactor;
                     }
                 }
             }
@@ -33,3 +34,6 @@ public class Problem3 {
     }
 }
 //300425737572L half of big number
+
+//13195L
+//6598L
