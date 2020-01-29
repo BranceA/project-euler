@@ -5,7 +5,8 @@ public class Problem3 {
 
     private static long largestPrimeFactor(){
         long currentHighest = 2;
-        for(long i = 3L; i < 300425737572L; i += 2){
+        long divisor = maxNumber(600851475143L);
+        for(long i = 3L; i < (600851475143L/divisor); i += 2){
             if(600851475143L % i == 0) {
                 long otherFactor = 600851475143L/2;
                 if (isPrime(i)) {
@@ -32,8 +33,19 @@ public class Problem3 {
         }
         return true;
     }
+
+    private static long maxNumber(long num){
+        for(long i = 3; i < num; i++){
+            if(num % i == 0){
+                return i;
+            }
+        }
+        return 3;
+    }
 }
 //300425737572L half of big number
+//200283825048L third of big number
 
 //13195L
 //6598L
+//4399L
