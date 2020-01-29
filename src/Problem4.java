@@ -1,14 +1,19 @@
 public class Problem4 {
     public static void main(String[] args) {
-        System.out.println("isPalindrome(1001) = " + isPalindrome(1001));
-        System.out.println("isPalindrome(1234) = " + isPalindrome(1234));
-        System.out.println("isPalindrome(12344321) = " + isPalindrome(12344321));
-        System.out.println("isPalindrome(12563027) = " + isPalindrome(12563027));
+        System.out.println(largestPalindromeProduct());
     }
 
-//    private static long largestPalindromeProduct(){
-//
-//    }
+    private static long largestPalindromeProduct(){
+        for(int i = 99; i >= 10; i--){
+            for(int j = 99; j >= 10; j--){
+                long product = i * j;
+                if(isPalindrome(product)){
+                    return product;
+                }
+            }
+        }
+        return 0;
+    }
 
     private static boolean isPalindrome(long numberToCheck){
         int numberOfDigits = numberOfDigits(numberToCheck);
