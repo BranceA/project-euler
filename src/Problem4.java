@@ -4,15 +4,18 @@ public class Problem4 {
     }
 
     private static long largestPalindromeProduct(){
-        for(int i = 99; i >= 10; i--){
-            for(int j = 99; j >= 10; j--){
+        long currentHighest = 0;
+        for(int i = 999; i >= 100; i--){
+            for(int j = 999; j >= 100; j--){
                 long product = i * j;
                 if(isPalindrome(product)){
-                    return product;
+                    if(product > currentHighest){
+                        currentHighest = product;
+                    }
                 }
             }
         }
-        return 0;
+        return currentHighest;
     }
 
     private static boolean isPalindrome(long numberToCheck){
